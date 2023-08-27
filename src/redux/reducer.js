@@ -45,6 +45,9 @@ const contactSlice = createSlice({
 
 export const contactSliceReducer = contactSlice.reducer;
 export const selectContacts = store => store.contacts;
+export const selectisLoading = store => store.contacts.isLoading;
+export const selectError = store => store.contacts.error;
+
 
 const filterSlice = createSlice({
   name: 'filter',

@@ -12,6 +12,12 @@ li {
   margin: 0;
   display: block;
 }
+.progress-bar-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 .form-container {
   display: flex;
   justify-content: center;
@@ -77,6 +83,8 @@ li {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  height: 350px;
+  overflow: auto;
   list-style: none;
   row-gap: 10px;
   margin-top: 15px;
