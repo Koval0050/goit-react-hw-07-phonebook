@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectContacts, setFilter, selectFilter } from 'redux/reducer';
-import { deleteContact, fetchContacts } from 'api/api';
+import { deleteContact } from 'api/api';
 
 const ContactList = () => {
   const dispatch = useDispatch();
@@ -14,9 +14,8 @@ const ContactList = () => {
 
   useEffect(() => {
     filterContacts(searchValue);
-    dispatch(fetchContacts());
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [contactList, searchValue, dispatch]);
+  }, [contactList, searchValue]);
 
   const handleInput = elem => {
     const value = elem.target.value;
